@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Charakter-Mindmap</title>
+  <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+  <style>
+    body { margin: 0; font-family: sans-serif; }
+    #cy { width: 100vw; height: 100vh; display: block; }
+  </style>
+</head>
+<body>
+  <div id="cy"></div>
+  <script>
+    const cy = cytoscape({
+      container: document.getElementById('cy'),
+      elements: [
+        // Knoten
+        { data: { id: 'anna', label: 'Anna' }, style: { 'background-color': '#ff9999' } },
+        { data: { id: 'lina lou', label: 'Lina Lou' }, style: { 'background-color': '#99ccff' } },
+        { data: { id: 'clara', label: 'Clara' }, style: { 'background-color': '#99ff99' } },
+        { data: { id: 'david', label: 'David' }, style: { 'background-color': '#ffcc66' } },
+
+        // Kanten (Beziehungen)
+        { data: { source: 'anna', target: 'Lina Lou', label: 'gf' }, style: { 'line-color': 'green' } },
+        { data: { source: 'clara', target: 'david', label: 'Feinde' }, style: { 'line-color': 'red', 'line-style': 'dashed' } },
+        { data: { source: 'ben', target: 'david', label: 'Kollegen' }, style: { 'line-color': 'orange' } }
+      ],
+      style: [
+        {
+          selector: 'node',
+          style: {
+            'label': 'data(label)',
+            'text-valign': 'center',
+            'color': '#000',
+            'font-size': 14,
+            'text-outline-width': 1,
+            'text-outline-color': '#fff'
+          }
+        },
+        {
+          selector: 'edge',
+          style: {
+            'width': 3,
+            'target-arrow-shape': 'triangle',
+            'curve-style': 'bezier',
+            'label': 'data(label)',
+            'font-size': 10,
+            'color': '#555',
+            'text-background-color': '#fff',
+            'text-background-opacity': 0.8,
+            'text-background-padding': 2
+          }
+        }
+      ],
+      layout: {
+        name: 'cose', // automatisches Layout
+        padding: 30
+      }
+    });
+  </script>
+</body>
+</html>
