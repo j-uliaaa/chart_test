@@ -18,13 +18,15 @@
         // Knoten
         { data: { id: 'anna', label: 'Anna' }, style: { 'background-color': '#ff9999' } },
         { data: { id: 'lina lou', label: 'Lina Lou' }, style: { 'background-color': '#99ccff' } },
-        { data: { id: 'clara', label: 'Clara' }, style: { 'background-color': '#99ff99' } },
-        { data: { id: 'david', label: 'David' }, style: { 'background-color': '#ffcc66' } },
+        { data: { id: 'julia', label: 'Julia' }, style: { 'background-color': '#99ff99' } },
+        { data: { id: 'anne', label: 'Anne' }, style: { 'background-color': '#ffcc66' } },
+        { data: { id: 'ayla', label: 'Ayla' }, style: { 'background-color': '##ffb3ba' } },
+        { data: { id: 'josi', label: 'Josi' }, style: { 'background-color': '#baffc9' } },
 
         // Kanten (Beziehungen)
         { data: { source: 'anna', target: 'Lina Lou', label: 'gf' }, style: { 'line-color': 'green' } },
-        { data: { source: 'clara', target: 'david', label: 'Feinde' }, style: { 'line-color': 'red', 'line-style': 'dashed' } },
-        { data: { source: 'ben', target: 'david', label: 'Kollegen' }, style: { 'line-color': 'orange' } }
+        { data: { source: 'julia', target: 'anne', label: 'gf' }, style: { 'line-color': 'green'} },
+        { data: { source: 'ayla', target: 'josi', label: 'bff' }, style: { 'line-color': 'orange' } }
       ],
       style: [
         {
